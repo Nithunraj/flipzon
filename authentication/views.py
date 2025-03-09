@@ -53,3 +53,6 @@ def signout(request):
     logout(request)
     messages.success(request,"Sucessfully logged out")
     return redirect('home')
+
+def signup_page(request):
+    return render(request,'authentication/signup.html')
