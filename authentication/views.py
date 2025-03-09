@@ -23,12 +23,12 @@ def signup(request):
         myuser.last_name = last_name
 
 
-        # myuser.save()
+        myuser.save()
 
         messages.success(request,"Your account has been sucessfully created")
         return redirect('signin')
 
-    return render(request,'authentication/signup.html')
+    return render(request,'authentication/index.html')
 
 def signin(request):
     if request.method == "POST":
@@ -41,9 +41,10 @@ def signin(request):
             login(request,user)
             print("yes")
             messages.success(request,"Sucessfully logged in")
-            return render(request,'authentication/index.html',{'fname':username})
+            return render(request,'authentication/dashboard.html',{'fname':username})
         else:
             messages.error(request,"OPPS! Wrong Credentials")
+            print("wrong")
             return redirect('home')
 
     return render(request,'authentication/signin.html')

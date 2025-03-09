@@ -1,0 +1,114 @@
+body {
+    background-image: url("../images/background2.webp");
+    background-size: cover; /* Ensures the image covers the full screen */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.page-header {
+    position: fixed;
+    /* background-color: rgb(44, 122, 196); */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.flipzon-logo-word {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.forms-tab {
+    height: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    /* background-color: white; */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.20); */
+    border-radius: 5px;
+}
+
+.welcome-font {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.text-box-div {
+    padding-bottom: 10px;
+}
+
+.text-box-design {
+    /* position: fixed; */
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border-width: 1px;
+    padding-left: 15px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    cursor:text;
+    border: 0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.30);
+}
+
+.text-box-design::placeholder {
+    color: rgb(212, 212, 212);
+    border-width: 1px;
+    font-weight: bold;
+}
+
+.text-box-design:focus{
+    width: 200px;
+    background-color: rgb(209, 188, 223);
+}
+
+.text-box-design:focus::placeholder{
+    color: rgb(0, 0, 0);
+    border-width: 1px;
+    font-weight: bold;
+}
+
+.button-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    flex-direction: row;
+}
+
+.signup-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    background-color: rgb(80, 255, 197);
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    transition:background-color 0.15s;
+}
+
+.signup-button:hover {
+    background-color:  rgb(71, 228, 176);
+}

@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlipZon</title>
+    <title>Sign in</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 </head>
 <body>
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-        <strong>Message:</strong> {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div class="page-header">
+        <p class="flipzon-logo-word">Flipzon</p>
     </div>
-    {% endfor %}
-
-    {% if user.is_authenticated %}
-    <h3>Hello {{fname}}</h3>
-    <h4>You're successfully logged in</h4>
-    <button type="submit"><a href="/signout">Signout</a></button>
-    {% else %}
-    <h1>Welcome to FlipZon</h1>
-    <button type="submit"><a href="/signup">Signup</a></button>
-    <button type="submit"><a href="/signin">Signin</a></button>
-    {% endif %}
-    
+    <div class="forms-tab-aligner">
+        <div class="forms-tab">
+            <p class="welcome-font">Welcome</p>
+            <form action="/signin" method="post">
+                {% csrf_token %}
+                <div class="text-box-div">
+                    <input class="text-box-design" type="text" id="username" name="username" placeholder="Enter username" required>
+                </div>
+                <div class="text-box-div">
+                    <input class="text-box-design" type="password" id="pass1" name="pass1" placeholder="Enter your password" required>
+                </div>
+                <div class="button-div">
+                    <button class="signup-button" type="submit">Sign in</button>
+                    <button class="signup-button" type="submit" onclick="window.location.href='signup'">Sign up</button>
+                </div>
+            </form>
+            <div>
+                {% for message in messages %}
+                    <div><p>{{ message }}</p></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </body>
 </html>

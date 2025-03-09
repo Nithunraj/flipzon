@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dashboard
+        </title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    </head>
+    <body class="body-tag">
+        <div class="page-header">
+            <div class="flipzon-logo-div"><p class="flipzon-logo-word">Flipzon</p></div>
+            <div class="button-header">
+                <form action="/signout" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="button-signout">Sign Out</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            Flipzon welcomes you!!
+        </div>
+    </body>
+</html>

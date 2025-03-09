@@ -1,0 +1,55 @@
+.body-tag {
+    padding-top: 40px;
+}
+
+.page-header {
+    background-image: url("../images/background2.webp");
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.flipzon-logo-div {
+    flex: 1;
+}
+
+.flipzon-logo-word {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.button-header {
+    flex: 1;
+    padding-left: 200px;
+    position: fixed;
+    right:10px;
+    top:10px;
+}
+
+.button-signout {
+    background-color: red;
+    border: 0;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+.button-signout:hover {
+    background-color: rgb(204, 0, 0);
+}
+
+.button-signout:active {
+    background-color: brown;
+}
